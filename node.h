@@ -8,15 +8,29 @@ using namespace std;
 template <typename T>
 class Node {
     unsigned int size;
-    vector<unsigned int> keys;
+    vector<T> keys;
     vector<Node<T>*> childs;
     bool isLeaf;
 
     public: 
         Node(unsigned int size, bool isLeaf = true) : size(size), isLeaf(isLeaf) {
             keys.resize(size - 1);
-            childs.resize(size);
+            childs.resize(size,nullptr);
         }
+        bool operator!=(Node<T> &other){
+            
+            return false;
+        };
+        bool operator<(Node<T> &other){
+
+
+        };
+        bool operator>(Node<T> &other){
+
+        };
+        bool operator==(Node<T> &other){
+
+        };
 
         /**
          * An alternative is to create two different nodes (Internal and Leaf) that inherite from Node 
