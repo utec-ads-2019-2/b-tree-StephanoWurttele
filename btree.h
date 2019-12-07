@@ -11,12 +11,13 @@ class BTree {
     public:
         BTree(unsigned int degree) : degree(degree), root(nullptr) {};
 
-        bool search(T data) { 
+        bool search(T data) {
+            int i;
             if(!root)
                 return false;
             Node<T>* temp=root;
             while(true){
-                for (int i =0 ; i < temp->keys.size() ; i++){
+                for (i =0 ; i < temp->keys.size() ; i++){
                     if(temp->keys[i]==data)
                         return true;
                     else
